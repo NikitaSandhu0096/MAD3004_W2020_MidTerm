@@ -14,11 +14,17 @@ class Customer : IDisplay{
     var lastName : String
     var fullName : String
     var email : String
-    var bills :
+    var bills : Dictionary<Int, Any>
     var totalAmountToPay : Double
     
-    init(customerId : Int, firstName : String, lastName : String, fullName : String, email : String, bills : , totalAmountToPay : Double) {
-        self.
+    init(customerId : Int, firstName : String, lastName : String, fullName : String, email : String, bills : Dictionary<Int, Any> , totalAmountToPay : Double) {
+        self.customerId = customerId
+        self.firstName = firstName
+        self.lastName = lastName
+        self.fullName = fullName
+        self.email = email
+        self.bills = bills
+        self.totalAmountToPay = totalAmountToPay
     }
     
     func display() {
