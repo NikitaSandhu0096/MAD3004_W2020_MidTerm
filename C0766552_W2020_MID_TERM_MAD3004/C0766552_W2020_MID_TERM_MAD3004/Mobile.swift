@@ -25,4 +25,8 @@ class Mobile : Bill{
         self.mobileRate = mobileRate
         super.init(billId: billId, billDate: billDate, billType: billType, totalBillAmount: totalBillAmount)
     }
+    
+    override func display() {
+        <#code#>
+    }
 }
