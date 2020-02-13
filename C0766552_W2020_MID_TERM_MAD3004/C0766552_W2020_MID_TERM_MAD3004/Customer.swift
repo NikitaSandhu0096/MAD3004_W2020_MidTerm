@@ -28,6 +28,10 @@ class Customer : IDisplay{
     }
     
     func display() {
-        <#code#>
+        
+        print("Customer ID : \(customerId)")
+        print("Customer Full Name : \(fullName)")
+        print("Customer Email ID : \(email)")
+        print("Total Bill Amount to Pay : \(totalAmountToPay)")
     }
 }
