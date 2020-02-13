@@ -14,7 +14,8 @@ enum type {
     case Hydro
 }
 
-class Bill{
+class Bill : IDisplay{
+    
     var billId : Int = 0
     var billDate : Date
     var billType : type
@@ -25,5 +26,9 @@ class Bill{
         self.billDate = billDate
         self.billType = billType
         self.totalBillAmount = totalBillAmount
+    }
+    
+    func display() {
+        <#code#>
     }
 }
