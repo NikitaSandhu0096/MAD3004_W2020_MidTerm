@@ -19,4 +19,8 @@ class Hydro : Bill{
         self.hyrdoRate = hydroRate
         super.init(billId: billId, billDate: billDate, billType: billType, totalBillAmount: totalBillAmount)
     }
+    
+    override func display() {
+        <#code#>
+    }
 }
