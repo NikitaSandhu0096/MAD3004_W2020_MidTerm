@@ -12,7 +12,9 @@ class Customer : IDisplay{
     var customerId : Int
     var firstName : String
     var lastName : String
-    var fullName : String
+    var fullName : String{
+        return "\(firstName) \(lastName)"
+    }
     var email : String
     var bills : Dictionary<Int, Any>
     var totalAmountToPay : Double
@@ -28,7 +30,6 @@ class Customer : IDisplay{
     }
     
     func display() {
-        
         print("Customer ID : \(customerId)")
         print("Customer Full Name : \(fullName)")
         print("Customer Email ID : \(email)")
