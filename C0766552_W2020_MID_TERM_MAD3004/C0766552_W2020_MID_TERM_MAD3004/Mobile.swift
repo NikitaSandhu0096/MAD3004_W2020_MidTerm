@@ -14,9 +14,9 @@ class Mobile : Bill{
     var mobileNumber : Int
     var internetGBUsed : Int
     var minuteUsed : Int
-    var mobileRate : Int
+    var mobileRate : Double
     
-    init(billId: String, billDate: Date, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : Int, internetGBUsed : Int, minuteUsed : Int, mobileRate : Int) {
+    init(billId: String, billDate: Date, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : Int, internetGBUsed : Int, minuteUsed : Int, mobileRate : Double) {
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
         self.mobileNumber = mobileNumber
@@ -27,13 +27,13 @@ class Mobile : Bill{
     }
     
     func calculateBill() -> Double {
-        totalBillAmount = Double(internetGBUsed * mobileRate)
+        totalBillAmount = Double(internetGBUsed) * mobileRate
         return totalBillAmount
     }
     
     override func display() {
         super.display()
-        print("Bill Amount : \(totalBillAmount)")
+        print("Bill Amount : \(calculateBill())")
         print("Manufacturer Name : \(self.mobileManufacturerName)")
         print("Plan Name : \(self.planName)")
         print("Mobile Number : \(self.mobileNumber)")

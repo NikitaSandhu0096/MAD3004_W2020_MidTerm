@@ -38,6 +38,10 @@ class Customer : IDisplay{
         print("Customer ID : \(self.customerId)")
         print("Customer Full Name : \(self.fullName)")
         print("Customer Email ID : \(self.email)")
+        print("------Bill Information------")
+//        for _ in totalAmountToPay {
+//            <#code#>
+//        }
         print("Total Bill Amount to Pay : \(self.totalAmountToPay)")
     }
 }
