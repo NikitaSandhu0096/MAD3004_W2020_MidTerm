@@ -31,10 +31,11 @@ class Mobile : Bill{
         print("Bill Date : \(billDate)")
         print("Bill Type : \(billType)")
         print("Bill Amount : \(totalBillAmount)")
-        print("Manufacturer Name : \(mobileManufacturerName)")
-        print("Plan Name : \(planName)")
-        print("Mobile Number : \(mobileNumber)")
-        print("Internet Usage : \(intenetGBUsed)")
-        print("Minutes Usage : \(minuteUsed)")
-        print("Mobile Rate : \(mobileRate)")    }
+        print("Manufacturer Name : \(self.mobileManufacturerName)")
+        print("Plan Name : \(self.planName)")
+        print("Mobile Number : \(self.mobileNumber)")
+        print("Internet Usage : \(self.intenetGBUsed)")
+        print("Minutes Usage : \(self.minuteUsed)")
+        print("Mobile Rate : \(self.mobileRate)")
+    }
 }

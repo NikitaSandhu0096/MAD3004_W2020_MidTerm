@@ -35,9 +35,9 @@ class Customer : IDisplay{
     }
     
     func display() {
-        print("Customer ID : \(customerId)")
-        print("Customer Full Name : \(fullName)")
-        print("Customer Email ID : \(email)")
-        print("Total Bill Amount to Pay : \(totalAmountToPay)")
+        print("Customer ID : \(self.customerId)")
+        print("Customer Full Name : \(self.fullName)")
+        print("Customer Email ID : \(self.email)")
+        print("Total Bill Amount to Pay : \(self.totalAmountToPay)")
     }
 }
