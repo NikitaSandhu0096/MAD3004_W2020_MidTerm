@@ -16,7 +16,7 @@ class Customer : IDisplay{
         return "\(firstName) \(lastName)"
     }
     var email : String
-    var bills : Dictionary<Int, Any>
+    var bills : Dictionary<Int, Array<String>>
     var totalAmountToPay : Double
     
     init(customerId : Int, firstName : String, lastName : String, fullName : String, email : String, bills : Dictionary<Int, Any> , totalAmountToPay : Double) {
@@ -24,7 +24,7 @@ class Customer : IDisplay{
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
-        self.bills = bills
+        self.bills = bills as! Dictionary<Int, Array<String>>
         self.totalAmountToPay = totalAmountToPay
     }
     
