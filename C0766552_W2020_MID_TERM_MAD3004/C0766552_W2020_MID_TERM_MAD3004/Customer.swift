@@ -17,9 +17,7 @@ class Customer : IDisplay{
     }
     var email : String
     var bills = [String : Bill]()
-    var totalAmountToPay : Double{
-        _ = 0.0
-    }
+    var totalAmountToPay : Double = 0.0
     
     init(customerId : String, firstName : String, lastName : String, fullName : String, email : String, bills : [String : Bill]) {
         self.customerId = customerId
@@ -27,7 +25,7 @@ class Customer : IDisplay{
         self.lastName = lastName
         self.email = email
         self.bills = bills
-       // self.totalAmountToPay = totalAmountToPay
+        //self.totalAmountToPay = totalAmountToPay
     }
     
     func display() {
