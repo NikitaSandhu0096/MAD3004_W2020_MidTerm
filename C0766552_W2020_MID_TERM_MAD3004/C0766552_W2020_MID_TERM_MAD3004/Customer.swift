@@ -16,16 +16,12 @@ class Customer : IDisplay{
         return "\(firstName) \(lastName)"
     }
     var email : String
-    var bills = [String : Array<Any>]()
+    var bills = [String : Bill]()
     var totalAmountToPay : Double{
-        var b = 0.0
-        for () in <#items#> {
-            <#code#>
-        }
-        return b
+        _ = 0.0
     }
     
-    init(customerId : String, firstName : String, lastName : String, fullName : String, email : String, bills : [String : Array<Any>]) {
+    init(customerId : String, firstName : String, lastName : String, fullName : String, email : String, bills : [String : Bill]) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
@@ -39,7 +35,8 @@ class Customer : IDisplay{
         print("Customer Full Name : \(self.fullName)")
         print("Customer Email ID : \(self.email)")
         print("------Bill Information------")
-//        for _ in totalAmountToPay {
+        print("***************************")
+        //        for _ in totalAmountToPay {
 //            <#code#>
 //        }
         print("Total Bill Amount to Pay : \(self.totalAmountToPay)")
