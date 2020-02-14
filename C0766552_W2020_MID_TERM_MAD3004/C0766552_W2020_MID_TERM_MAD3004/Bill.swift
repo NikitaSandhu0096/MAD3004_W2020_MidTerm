@@ -15,8 +15,7 @@ enum type {
 }
 
 class Bill : IDisplay{
-    
-    var billId : Int = 0
+    var billId : Int
     var billDate : Date
     var billType : type
     var totalBillAmount : Double

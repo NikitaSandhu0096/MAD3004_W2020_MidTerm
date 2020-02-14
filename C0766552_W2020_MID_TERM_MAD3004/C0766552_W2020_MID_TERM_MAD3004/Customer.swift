@@ -23,7 +23,6 @@ class Customer : IDisplay{
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
-        self.fullName = fullName
         self.email = email
         self.bills = bills
         self.totalAmountToPay = totalAmountToPay
