@@ -26,9 +26,11 @@ class Bill : IDisplay{
         self.billType = billType
     }
     
+    //https://medium.com/@lugearma/converting-date-string-to-date-type-with-swift-8b6b2f07d50
+    
     func evaluateDate() -> Date {
         let dateformat = DateFormatter()
-        dateformat.dateFormat = "MM/dd/yyy"
+        dateformat.dateFormat = "EEE,d MMM, YYYY"
         guard let date = dateformat.date(from: billDate) else {  print("Enter valid Date") }
         return date
     }

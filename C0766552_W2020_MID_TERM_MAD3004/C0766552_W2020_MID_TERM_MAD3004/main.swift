@@ -10,7 +10,7 @@ import Foundation
 
 print("Hello, World!")
 
-var i1 = Internet(billId: "INTB0001", billDate: <#T##Date#>, billType: .Internet, providerName: "Rogers", internetGBUsed: 500, internetRate: 0.5)
+var i1 = Internet(billId: "INTB0001", billDate: "", billType: .Internet, providerName: "Rogers", internetGBUsed: 500, internetRate: 0.5)
 
 var i2 = Internet(billId: "INTB0002", billDate: <#T##Date#>, billType: .Internet, providerName: "Rogers", internetGBUsed: 400, internetRate: 0.9)
 
