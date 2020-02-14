@@ -13,7 +13,7 @@ class Internet : Bill{
     var internetGBUsed : Int
     var internetRate : Int
     
-    init(billId: Int, billDate: Date, billType: type, totalBillAmount: Double, providerName : String, internetGBUsed : Int, internetRate : Int) {
+    init(billId: String, billDate: Date, billType: type, totalBillAmount: Double, providerName : String, internetGBUsed : Int, internetRate : Int) {
         self.providerName = providerName
         self.internetGBUsed = internetGBUsed
         self.internetRate = internetRate
