@@ -20,6 +20,11 @@ class Internet : Bill{
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
+//    func gbUsed() -> String {
+//        let g = String.init(format: "% GB", self.internetGBUsed)
+//        return g
+//    }
+    
     func calculateBill() -> Double {
         totalBillAmount = Double(internetGBUsed) * internetRate
         return totalBillAmount
@@ -29,7 +34,7 @@ class Internet : Bill{
         super.display()
         print("Bill Amount : \(calculateBill())")
         print("Provider Name : \(self.providerName)")
-        print("Internet Usage : \(self.internetGBUsed)")
+        print("Internet Usage : \(gbUsed())")
         print("Internet Rate : \(self.internetRate)")
     }
 }
