@@ -16,16 +16,22 @@ class Customer : IDisplay{
         return "\(firstName) \(lastName)"
     }
     var email : String
-    var bills = [String : String]()
-    var totalAmountToPay : Double
+    var bills = [String : Double]()
+    var totalAmountToPay : Double{
+        var b = 0.0
+        for i in bills{
+            b = b + i.value
+        }
+        return b
+    }
     
-    init(customerId : Int, firstName : String, lastName : String, fullName : String, email : String, bills : [String : String], totalAmountToPay : Double) {
+    init(customerId : Int, firstName : String, lastName : String, fullName : String, email : String, bills : [String : Double], totalAmountToPay : Double) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
         self.bills = bills
-        self.totalAmountToPay = totalAmountToPay
+       // self.totalAmountToPay = totalAmountToPay
     }
     
     func display() {
