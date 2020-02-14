@@ -13,16 +13,11 @@ class Internet : Bill{
     var internetGBUsed : Int
     var internetRate : Double
     
-    init(billId: String, billDate: Date, billType: type, providerName : String, internetGBUsed : Int, internetRate : Double) {
+    init(billId: String, billDate: String, billType: type, providerName : String, internetGBUsed : Int, internetRate : Double) {
         self.providerName = providerName
         self.internetGBUsed = internetGBUsed
         self.internetRate = internetRate
         super.init(billId: billId, billDate: billDate, billType: billType)
-    }
-    
-//    func gbUsed() -> String {
-//        let g = String.init(format: "%GB", self.internetGBUsed)
-//        return g
     }
     
     func calculateBill() -> Double {
