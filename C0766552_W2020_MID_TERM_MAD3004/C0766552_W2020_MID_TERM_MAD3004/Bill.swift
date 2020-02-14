@@ -15,12 +15,12 @@ enum type {
 }
 
 class Bill : IDisplay{
-    var billId : Int
+    var billId : String
     var billDate : Date
     var billType : type
     var totalBillAmount : Double
     
-    init(billId : Int, billDate : Date, billType : type, totalBillAmount : Double) {
+    init(billId : String, billDate : Date, billType : type, totalBillAmount : Double) {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
