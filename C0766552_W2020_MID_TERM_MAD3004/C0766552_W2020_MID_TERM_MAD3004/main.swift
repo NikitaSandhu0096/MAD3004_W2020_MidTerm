@@ -22,7 +22,9 @@ print("Hello, World!")
 
 //var m1 = Mobile(billId: "MOBB0001", billDate: "String", billType: .Mobile, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo Plan", mobileNumber: 9753142860, internetGBUsed: 4, minuteUsed: 230, mobileRate: 0.3)
 
-var i1 = Internet(billId: "INTB0001", billDate: "Saturday, 19 October, 2019", billType: .Internet, providerName: "Rogers", internetGBUsed: 500, internetRate: 0.5)
+var i1 = Internet(billId: "INTB0001", billDate: "3/12/2019", billType: .Internet, providerName: "Rogers", internetGBUsed: 500, internetRate: 0.5)
+
+i1.display()
 
 var i2 = Internet(billId: "INTB0002", billDate: "Sunday, 20 November, 2019", billType: .Internet, providerName: "Rogers", internetGBUsed: 400, internetRate: 0.9)
 

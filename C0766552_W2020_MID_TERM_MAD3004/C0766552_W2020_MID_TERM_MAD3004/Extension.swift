@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date{
+/*extension Date{
     static func evaluateDate(string : String) -> String {
         let dateformatGet = DateFormatter()
         dateformatGet.dateFormat = "MM/dd/yyyy"
@@ -22,4 +22,4 @@ extension Date{
             print("Check the format of date you have entered")
         }
     }
-}
+}*/

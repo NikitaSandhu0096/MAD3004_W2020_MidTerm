@@ -26,9 +26,22 @@ class Bill : IDisplay{
         self.billType = billType
     }
     
+    func evaluateDate(string : String) -> String {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
+        
+        let dateformatGet = DateFormatter()
+        dateformatGet.dateFormat = "dd/MM/yyyy"
+
+        let dateformatSet = DateFormatter()
+        dateformatSet.dateFormat = "EEEE,d MMMM, yyyy"
+
+        let date : Date? = dateformatGet.date(from: billDate)
+        return dateformatSet.string(from: date!)
+        
+    }
+    
     func display() {
         print("Bill ID : \(self.billId)")
-        print("Bill Date : \(self.billDate)")
+        print("Bill Date : \(evaluateDate(string: billDate))")
         print("Bill Type : \(self.billType)")
     }
 }
