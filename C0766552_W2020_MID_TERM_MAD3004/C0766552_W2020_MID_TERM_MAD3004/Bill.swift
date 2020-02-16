@@ -18,7 +18,7 @@ class Bill : IDisplay{
     var billId : String
     var billDate : String
     var billType : type
-    var totalBillAmount : Double = 0.0
+    var totalBillAmount : Float = 0.0
     
     init(billId : String, billDate : String, billType : type) {
         self.billId = billId

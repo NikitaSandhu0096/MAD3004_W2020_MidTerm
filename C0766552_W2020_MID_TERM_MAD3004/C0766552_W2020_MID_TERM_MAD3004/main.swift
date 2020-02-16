@@ -41,4 +41,3 @@ h1.display()
 h1.display()
 m1.display()
 
-var c

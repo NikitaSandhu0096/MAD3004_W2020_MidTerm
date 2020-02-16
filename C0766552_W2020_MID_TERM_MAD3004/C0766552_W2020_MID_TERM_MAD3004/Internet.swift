@@ -11,9 +11,9 @@ import Foundation
 class Internet : Bill{
     var providerName : String
     var internetGBUsed : Int
-    var internetRate : Double
+    var internetRate : Float
     
-    init(billId: String, billDate: String, billType: type, providerName : String, internetGBUsed : Int, internetRate : Double) {
+    init(billId: String, billDate: String, billType: type, providerName : String, internetGBUsed : Int, internetRate : Float) {
         self.providerName = providerName
         self.internetGBUsed = internetGBUsed
         self.internetRate = internetRate
@@ -21,8 +21,8 @@ class Internet : Bill{
     }
     
     func calculateBill() -> Double {
-        totalBillAmount = Double(internetGBUsed) * internetRate
-        return totalBillAmount
+        totalBillAmount = Float(internetGBUsed) * internetRate
+        return
     }
     
     override func display() {
