@@ -33,6 +33,8 @@ var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", ema
 
 var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@outlook.com")
 
+var c4 = Customer(customerId: "C0004", firstName: "Ajeesha", lastName: "Jacob", email: "ajacob@gmail.com")
+
 c1.addBill(bill: i1, billId: i1.billId)
 c1.addBill(bill: h1, billId: h1.billId)
 c1.addBill(bill: m1, billId: m1.billId)
@@ -45,3 +47,24 @@ c3.addBill(bill: i3, billId: i3.billId)
 c1.display()
 c2.display()
 c3.display()
+c4.display()
+
+/*var cust = [Customer]()
+
+func setCustomerById(customer : Customer, customerId : String) {
+    cust.append(c1)
+    cust.append(c2)
+    cust.append(c3)
+}
+
+for i in cust{
+    print(i)
+}
+print(cust)
+func getCustomerById(customerId : String){
+    
+}*/
+
+/*getCustomerById(customer: c1, customerId: c1.customerId)
+getCustomerById(customer: c2, customerId: c2.customerId)
+getCustomerById(customer: c3, customerId: c3.customerId)*/

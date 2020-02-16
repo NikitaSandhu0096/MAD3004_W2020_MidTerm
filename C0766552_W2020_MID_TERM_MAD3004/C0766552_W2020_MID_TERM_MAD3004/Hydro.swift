@@ -28,9 +28,9 @@ class Hydro : Bill, CalculateTotalBill{
     
     override func display() {
         super.display()
-        print("Bill Amount : \(calculateBill().currency())")
-        print("Agency Name : \(self.agencyName)")
-        print("Unit Consumed : \(self.unitConsumed)")
-        print("Hydro Rate : \(self.hyrdoRate.currencyPerUnit())")
+        print("      Bill Amount : \(calculateBill().currency())")
+        print("      Agency Name : \(self.agencyName)")
+        print("      Unit Consumed : \(self.unitConsumed)")
+        print("      Hydro Rate : \(self.hyrdoRate.currencyPerUnit())")
     }
 }

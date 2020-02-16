@@ -30,7 +30,7 @@ class Customer : IDisplay, CalculateTotalBill{
         return self.fullName
     }
     
-    func addBill(bill: Bill, billId : String) {
+    func addBill(bill : Bill, billId : String) {
         bills.updateValue(bill, forKey: billId)
     }
     
@@ -45,13 +45,16 @@ class Customer : IDisplay, CalculateTotalBill{
         print("Customer ID : \(self.customerId)")
         print("Customer Full Name : \(name())")
         print("Customer Email ID : \(self.email)")
-        print("------Bill Information------")
-        print("***************************")
+        print("      ----------Bill Information----------")
+        print("      ************************************")
         for i in bills{
             i.value.display()
-            print("***************************")
+            print("      ************************************")
         }
-        
-        print("Total Bill Amount to Pay : \(calculateBill().currency())")
+        if bills.count == 0{
+            print("      No Bill Found for the given customer")
+        }else{
+        print("       Total Bill Amount to Pay : \(calculateBill().currency())")
+        }
     }
 }

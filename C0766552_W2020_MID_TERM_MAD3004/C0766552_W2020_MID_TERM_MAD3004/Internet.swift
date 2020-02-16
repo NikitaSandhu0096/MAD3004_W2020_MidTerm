@@ -28,10 +28,10 @@ class Internet : Bill, CalculateTotalBill{
     
     override func display() {
         super.display()
-        print("Bill Amount : \(calculateBill().currency())")
-        print("Provider Name : \(self.providerName)")
-        print("Internet Usage : \(self.internetGBUsed.dataUsed())")
-        print("Internet Rate : \(self.internetRate.currencyPerGB())")
+        print("      Bill Amount : \(calculateBill().currency())")
+        print("      Provider Name : \(self.providerName)")
+        print("      Internet Usage : \(self.internetGBUsed.dataUsed())")
+        print("      Internet Rate : \(self.internetRate.currencyPerGB())")
     }
 }
 

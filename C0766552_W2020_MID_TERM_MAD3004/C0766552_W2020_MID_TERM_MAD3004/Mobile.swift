@@ -38,13 +38,13 @@ class Mobile : Bill, CalculateTotalBill{
 
     override func display() {
         super.display()
-        print("Bill Amount : \(calculateBill().currency())")
-        print("Manufacturer Name : \(self.mobileManufacturerName)")
-        print("Plan Name : \(self.planName)")
-        print("Mobile Number : \(self.mobileNumber)")
-        print("Internet Usage : \(self.internetGBUsed.dataUsed())")
-        print("Minutes Usage : \(self.minuteUsed.time())")
-        print("Plan Rate : \(self.planRate.currencyPerMin())")
-        print("Internet Rate : \(self.internetRate.currencyPerGB())")
+        print("      Bill Amount : \(calculateBill().currency())")
+        print("      Manufacturer Name : \(self.mobileManufacturerName)")
+        print("      Plan Name : \(self.planName)")
+        print("      Mobile Number : \(self.mobileNumber)")
+        print("      Internet Usage : \(self.internetGBUsed.dataUsed())")
+        print("      Minutes Usage : \(self.minuteUsed.time())")
+        print("      Plan Rate : \(self.planRate.currencyPerMin())")
+        print("      Internet Rate : \(self.internetRate.currencyPerGB())")
     }
 }
