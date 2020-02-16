@@ -31,7 +31,7 @@ class Internet : Bill, CalculateTotalBill{
         print("Bill Amount : \(calculateBill().currency())")
         print("Provider Name : \(self.providerName)")
         print("Internet Usage : \(self.internetGBUsed.dataUsed())")
-        print("Internet Rate : \(self.internetRate.currency())")
+        print("Internet Rate : \(self.internetRate.currencyPerGB())")
     }
 }
 

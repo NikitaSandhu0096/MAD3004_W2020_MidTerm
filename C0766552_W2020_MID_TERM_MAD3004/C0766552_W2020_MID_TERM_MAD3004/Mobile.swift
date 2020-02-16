@@ -44,7 +44,7 @@ class Mobile : Bill, CalculateTotalBill{
         print("Mobile Number : \(self.mobileNumber)")
         print("Internet Usage : \(self.internetGBUsed.dataUsed())")
         print("Minutes Usage : \(self.minuteUsed.time())")
-        print("Plan Rate : \(self.planRate.currency())")
-        print("Internet Rate : \(self.internetRate.currency())")
+        print("Plan Rate : \(self.planRate.currencyPerMin())")
+        print("Internet Rate : \(self.internetRate.currencyPerGB())")
     }
 }
