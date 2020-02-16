@@ -27,7 +27,7 @@ h1.display()
 h2.display()
 m1.display()*/
 
-var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
+var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "tempEmail")
 
 var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com")
 
@@ -44,27 +44,21 @@ c2.addBill(bill: h2, billId: h2.billId)
 
 c3.addBill(bill: i3, billId: i3.billId)
 
-c1.display()
+/*c1.display()
 c2.display()
 c3.display()
-c4.display()
+c4.display()*/
 
-/*var cust = [Customer]()
+var customers = [String : Customer]()
 
-func setCustomerById(customer : Customer, customerId : String) {
-    cust.append(c1)
-    cust.append(c2)
-    cust.append(c3)
+func addCustomer(customer : Customer, customerId : String) {
+    customers.updateValue(customer, forKey: customerId)
 }
 
-for i in cust{
-    print(i)
-}
-print(cust)
-func getCustomerById(customerId : String){
-    
-}*/
+addCustomer(customer: c1, customerId: c1.customerId)
+addCustomer(customer: c2, customerId: c2.customerId)
+addCustomer(customer: c3, customerId: c3.customerId)
+addCustomer(customer: c4, customerId: c4.customerId)
 
-/*getCustomerById(customer: c1, customerId: c1.customerId)
-getCustomerById(customer: c2, customerId: c2.customerId)
-getCustomerById(customer: c3, customerId: c3.customerId)*/
+
+

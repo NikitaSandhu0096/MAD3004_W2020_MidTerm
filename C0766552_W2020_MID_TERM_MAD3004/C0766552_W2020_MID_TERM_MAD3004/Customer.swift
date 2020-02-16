@@ -17,6 +17,7 @@ class Customer : IDisplay, CalculateTotalBill{
     var email : String
     private lazy var bills = [String : Bill]()
     var totalAmountToPay : Float = 0.0
+    var customers = [String : Customer]()
     
     init(customerId : String, firstName : String, lastName : String, email : String) {
         self.customerId = customerId
@@ -40,6 +41,16 @@ class Customer : IDisplay, CalculateTotalBill{
         }
         return totalAmountToPay
     }
+
+    func addCustomer(customer : Customer, customerId : String) {
+        customers.updateValue(customer, forKey: customerId)
+    }
+    
+    subscript(code : String) -> Any{
+        get{
+            return self.customers
+        }
+    }
     
     func display() {
         print("Customer ID : \(self.customerId)")
@@ -54,7 +65,7 @@ class Customer : IDisplay, CalculateTotalBill{
         if bills.count == 0{
             print("      No Bill Found for the given customer")
         }else{
-        print("       Total Bill Amount to Pay : \(calculateBill().currency())")
+        print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }
     }
 }
