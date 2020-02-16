@@ -20,7 +20,7 @@ class Internet : Bill{
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
-    func calculateBill() -> Float {
+    override func calculateBill() -> Float {
         totalBillAmount = Float(self.internetGBUsed) * self.internetRate
         return totalBillAmount
     }

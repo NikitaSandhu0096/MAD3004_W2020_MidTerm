@@ -27,14 +27,12 @@ h1.display()
 h2.display()
 m1.display()*/
 
-/*var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
+var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
 
 var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com")
 
-var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@reddit.com")*/
+var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@reddit.com")
 
-/*c1.display()
+c1.display()
 c2.display()
-c3.display()*/
-
-
+c3.display()

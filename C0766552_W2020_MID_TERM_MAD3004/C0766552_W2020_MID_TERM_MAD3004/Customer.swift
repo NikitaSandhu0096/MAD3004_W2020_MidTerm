@@ -14,7 +14,7 @@ class Customer : IDisplay{
     var lastName : String
     var fullName : String = ""
     var email : String
-    private lazy var bills = [String : Bill]()
+    private lazy var bills = [Int : Bill]()
     var totalAmountToPay : Double = 0.0
     
     init(customerId : String, firstName : String, lastName : String, email : String) {
@@ -24,23 +24,10 @@ class Customer : IDisplay{
         self.email = email
     }
     
-   /* subscript(code : String) -> Bill?{
-        get{
-            self.bills[code]
-        }
-        set(newValue){
-            self.bills.updateValue(newValue!, forKey: code)
-        }
-    }*/
-
     func name() -> String{
         self.fullName = "\(self.firstName) \(self.lastName)"
         return self.fullName
     }
-    
-  /*  func setBills(code : String, bills : Bill) {
-        self.bills.updateValue(bills, forKey: code)
-    } */
     
     func display() {
         print("Customer ID : \(self.customerId)")
@@ -48,7 +35,39 @@ class Customer : IDisplay{
         print("Customer Email ID : \(self.email)")
         print("------Bill Information------")
         print("***************************")
-        print(self.bills)
+        for(billId, bill) in bills{
+            print("Bill ID : \(billId)")
+            print("Bill Date : \(bill.billDate)")
+            print("Bill Type : \(bill.billType)")
+            print("Bill Amount : \(bill.totalBillAmount)")
+            
+            switch bill.billType {
+                
+            case type.Internet:
+                print("Bill Amount : ")
+                print("Provider Name : ")
+                print("Internet Usage : ")
+                print("Internet Rate : ")
+                
+            case type.Mobile:
+                print("Manufacturer Name : ")
+                print("Plan Name : ")
+                print("Mobile Number : ")
+                print("Internet Usage : ")
+                print("Minutes Usage : ")
+                print("Plan Rate : ")
+                print("Internet Rate : ")
+            
+            case type.Hydro:
+                print("Agency Name : ")
+                print("Unit Consumed : ")
+                
+            default:
+                ""
+            }
+        }
+        
+        print("***************************")
         print("Total Bill Amount to Pay : \(self.totalAmountToPay)")
     }
 }
