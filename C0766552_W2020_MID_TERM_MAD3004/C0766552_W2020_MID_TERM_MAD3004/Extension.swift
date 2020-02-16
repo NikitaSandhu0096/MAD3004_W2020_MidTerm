@@ -16,10 +16,22 @@ extension String{
     }
 }
 
-/*extension Int{
+extension Int{
     func mobileValid() -> Bool{
         let mobileNumberRegEx = "[0-9]{10}"
         let mobileTest = NSPredicate(format: "SELF MATCHES %@", mobileNumberRegEx)
         return mobileTest.evaluate(with: self)
     }
-}*/
+    
+    func dataUsed() -> String{
+        let g = String.init(format: "%.0f GB", self)
+        return g
+    }
+}
+
+extension Float{
+    func currency() -> String{
+        let c = String.init(format: "$%.2f", self)
+        return c
+    }
+}

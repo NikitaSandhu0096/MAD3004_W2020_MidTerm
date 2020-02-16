@@ -38,7 +38,7 @@ class Mobile : Bill, CalculateTotalBill{
 
     override func display() {
         super.display()
-        print("Bill Amount : \(calculateBill())")
+        print("Bill Amount : \(calculateBill().currency())")
         print("Manufacturer Name : \(self.mobileManufacturerName)")
         print("Plan Name : \(self.planName)")
         print("Mobile Number : \(self.mobileNumber)")

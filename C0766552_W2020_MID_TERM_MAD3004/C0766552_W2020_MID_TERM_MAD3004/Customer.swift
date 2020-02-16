@@ -52,6 +52,6 @@ class Customer : IDisplay, CalculateTotalBill{
             print("***************************")
         }
         
-        print("Total Bill Amount to Pay : \(calculateBill())")
+        print("Total Bill Amount to Pay : \(calculateBill().currency())")
     }
 }
