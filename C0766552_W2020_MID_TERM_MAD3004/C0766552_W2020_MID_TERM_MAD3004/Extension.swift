@@ -8,18 +8,18 @@
 
 import Foundation
 
-/*extension Date{
-    static func evaluateDate(string : String) -> String {
-        let dateformatGet = DateFormatter()
-        dateformatGet.dateFormat = "MM/dd/yyyy"
-
-        let dateformatSet = DateFormatter()
-        dateformatSet.dateFormat = "EEE,d MMMM, yyyy"
-
-        if let date = dateformatGet.date(from: billDate){
-            print(dateformatSet.string(from: date))
-        } else{
-            print("Check the format of date you have entered")
-        }
+extension String{
+    func emailValid() -> Bool{
+        let emailRegEx = "[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: self)
     }
-}*/
+}
+
+extension Int{
+    func mobileValid() -> Bool{
+        let mobileNumberRegEx = "[0-9]{10}"
+        let mobileTest = NSPredicate(format: "SELF MATCHES %@", mobileNumberRegEx)
+        return mobileTest.evaluate(with: self)
+    }
+}

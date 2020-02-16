@@ -27,10 +27,25 @@ h1.display()
 h2.display()
 m1.display()*/
 
-var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
+/*var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
 
 var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com")
 
-/*c1.display()
-c2.display()*/
+var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@reddit.com")*/
 
+
+//var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com", bills: ["INTB0001" : i1])
+
+
+
+
+/*c1.display()
+c2.display()
+c3.display()*/
+
+/*var customerArray = [c1, c2, c3]
+print(customerArray)
+
+var b1 : [String : Customer] = ["C0001" : c1, "C0002" : c2, "C0003" : c3]*/
+
+//print(b1["C0001"]!)

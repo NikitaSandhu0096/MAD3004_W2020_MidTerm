@@ -14,14 +14,24 @@ class Customer : IDisplay{
     var lastName : String
     var fullName : String = ""
     var email : String
-    var bills = [String : Bill]()
+    private lazy var bills = [String : Bill]()
     var totalAmountToPay : Double = 0.0
     
-    init(customerId : String, firstName : String, lastName : String, email : String) {
+    init(customerId : String, firstName : String, lastName : String, email : String, bills : [String : Bill]) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+        self.bills = bills
+    }
+    
+    subscript(code : String) -> Bill?{
+        get{
+            self.bills[code]
+        }
+        set(newValue){
+            self.bills.updateValue(newValue!, forKey: code)
+        }
     }
     
     func name() -> String{
@@ -29,15 +39,17 @@ class Customer : IDisplay{
         return self.fullName
     }
     
+  /*  func setBills(code : String, bills : Bill) {
+        self.bills.updateValue(bills, forKey: code)
+    } */
+    
     func display() {
         print("Customer ID : \(self.customerId)")
         print("Customer Full Name : \(name())")
         print("Customer Email ID : \(self.email)")
         print("------Bill Information------")
         print("***************************")
-        //        for _ in totalAmountToPay {
-//            <#code#>
-//        }
+        print(self.bills)
         print("Total Bill Amount to Pay : \(self.totalAmountToPay)")
     }
 }
