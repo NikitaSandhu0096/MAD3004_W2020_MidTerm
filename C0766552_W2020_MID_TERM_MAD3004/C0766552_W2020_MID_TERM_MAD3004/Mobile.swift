@@ -42,9 +42,9 @@ class Mobile : Bill, CalculateTotalBill{
         print("Manufacturer Name : \(self.mobileManufacturerName)")
         print("Plan Name : \(self.planName)")
         print("Mobile Number : \(self.mobileNumber)")
-        print("Internet Usage : \(self.internetGBUsed)")
-        print("Minutes Usage : \(self.minuteUsed)")
-        print("Plan Rate : \(self.planRate)")
-        print("Internet Rate : \(self.internetRate)")
+        print("Internet Usage : \(self.internetGBUsed.dataUsed())")
+        print("Minutes Usage : \(self.minuteUsed.time())")
+        print("Plan Rate : \(self.planRate.currency())")
+        print("Internet Rate : \(self.internetRate.currency())")
     }
 }

@@ -24,8 +24,13 @@ extension Int{
     }
     
     func dataUsed() -> String{
-        let g = String.init(format: "%.0f GB", self)
+        let g = String.init(format: "%i GB", self)
         return g
+    }
+    
+    func time() -> String {
+        let t = String.init(format: "%mins", self)
+        return t
     }
 }
 
