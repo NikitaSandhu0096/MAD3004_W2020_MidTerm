@@ -14,10 +14,7 @@ enum type {
     case Hydro
 }
 
-class Bill : IDisplay, CalculateTotalBill{
-    func calculateBill() {
-        <#code#>
-    }
+class Bill : IDisplay{
     
     var billId : String
     var billDate : String

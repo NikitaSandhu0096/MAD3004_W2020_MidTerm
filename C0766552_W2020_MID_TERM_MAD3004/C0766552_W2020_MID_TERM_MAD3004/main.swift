@@ -31,7 +31,16 @@ var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", 
 
 var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com")
 
-var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@reddit.com")
+var c3 = Customer(customerId: "C0003", firstName: "Jyothi", lastName: "Thomas", email: "jthomas@outlook.com")
+
+c1.addBill(bill: i1, billId: i1.billId)
+c1.addBill(bill: h1, billId: h1.billId)
+c1.addBill(bill: m1, billId: m1.billId)
+
+c2.addBill(bill: i2, billId: i2.billId)
+c2.addBill(bill: h2, billId: h2.billId)
+
+c3.addBill(bill: i3, billId: i3.billId)
 
 c1.display()
 c2.display()

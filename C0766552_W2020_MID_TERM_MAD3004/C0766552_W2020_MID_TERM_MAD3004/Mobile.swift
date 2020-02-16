@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Mobile : Bill{
+class Mobile : Bill, CalculateTotalBill{
+    
     var mobileManufacturerName : String
     var planName : String
     var mobileNumber : Int
@@ -34,7 +35,7 @@ class Mobile : Bill{
         totalBillAmount = intr + mob
         return totalBillAmount
     }
-    
+
     override func display() {
         super.display()
         print("Bill Amount : \(calculateBill())")

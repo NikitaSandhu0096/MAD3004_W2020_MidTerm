@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Internet : Bill{
+class Internet : Bill, CalculateTotalBill{
+    
     var providerName : String
     var internetGBUsed : Int
     var internetRate : Float
@@ -20,7 +21,7 @@ class Internet : Bill{
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
-    override func calculateBill() -> Float {
+    func calculateBill() -> Float {
         totalBillAmount = Float(self.internetGBUsed) * self.internetRate
         return totalBillAmount
     }

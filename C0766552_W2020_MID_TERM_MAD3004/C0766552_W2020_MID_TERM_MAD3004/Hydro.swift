@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Hydro : Bill{
+class Hydro : Bill, CalculateTotalBill{
+    
     var agencyName : String
     var unitConsumed : Int
     var hyrdoRate : Float
