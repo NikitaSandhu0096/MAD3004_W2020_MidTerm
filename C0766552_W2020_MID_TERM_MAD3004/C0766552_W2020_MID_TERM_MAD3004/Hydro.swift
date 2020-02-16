@@ -11,17 +11,17 @@ import Foundation
 class Hydro : Bill{
     var agencyName : String
     var unitConsumed : Int
-    var hyrdoRate : Double
+    var hyrdoRate : Float
     
-    init(billId: String, billDate: String, billType: type, agencyName : String, unitConsumed : Int, hydroRate : Double) {
+    init(billId: String, billDate: String, billType: type, agencyName : String, unitConsumed : Int, hydroRate : Float) {
         self.agencyName = agencyName
         self.unitConsumed = unitConsumed
         self.hyrdoRate = hydroRate
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
-    func calculateBill() -> Double {
-        totalBillAmount = Double(unitConsumed) * hyrdoRate
+    func calculateBill() -> Float {
+        totalBillAmount = Float(self.unitConsumed) * self.hyrdoRate
         return totalBillAmount
     }
     

@@ -14,20 +14,24 @@ class Mobile : Bill{
     var mobileNumber : Int
     var internetGBUsed : Int
     var minuteUsed : Int
-    var mobileRate : Double
-    
-    init(billId: String, billDate: String, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : Int, internetGBUsed : Int, minuteUsed : Int, mobileRate : Double) {
+    var planRate : Float
+    var internetRate : Float
+
+    init(billId: String, billDate: String, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : Int, internetGBUsed : Int, minuteUsed : Int, planRate : Float, internetRate : Float) {
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
         self.mobileNumber = mobileNumber
         self.internetGBUsed = internetGBUsed
         self.minuteUsed = minuteUsed
-        self.mobileRate = mobileRate
+        self.planRate = planRate
+        self.internetRate = internetRate
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
-    func calculateBill() -> Double {
-        totalBillAmount = Double(internetGBUsed) * mobileRate
+    func calculateBill() -> Float {
+        let intr = Float(self.internetGBUsed) * self.internetRate
+        let mob = Float(self.minuteUsed) * self.planRate
+        totalBillAmount = intr + mob
         return totalBillAmount
     }
     
@@ -39,6 +43,7 @@ class Mobile : Bill{
         print("Mobile Number : \(self.mobileNumber)")
         print("Internet Usage : \(self.internetGBUsed)")
         print("Minutes Usage : \(self.minuteUsed)")
-        print("Mobile Rate : \(self.mobileRate)")
+        print("Plan Rate : \(self.planRate)")
+        print("Internet Rate : \(self.internetRate)")
     }
 }
