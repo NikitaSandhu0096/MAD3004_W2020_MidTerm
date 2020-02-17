@@ -27,7 +27,7 @@ h1.display()
 h2.display()
 m1.display()*/
 
-var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "tempEmail")
+var c1 = Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com")
 
 var c2 = Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com")
 
@@ -60,5 +60,17 @@ addCustomer(customer: c2, customerId: c2.customerId)
 addCustomer(customer: c3, customerId: c3.customerId)
 addCustomer(customer: c4, customerId: c4.customerId)
 
+/*for i in customers{
+    i.value.display()
+}*/
 
+func getCustomerById(Id : String) {
+    if (customers.index(forKey: Id) != nil) {
+        customers[Id]?.display()
+    }else{
+        print("Customer doesn't exist")
+    }
+}
 
+getCustomerById(Id: "C0001")
+getCustomerById(Id: "C0005")

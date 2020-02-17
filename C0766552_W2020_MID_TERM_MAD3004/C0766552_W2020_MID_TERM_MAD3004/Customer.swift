@@ -16,8 +16,7 @@ class Customer : IDisplay, CalculateTotalBill{
     var fullName : String = ""
     var email : String
     private lazy var bills = [String : Bill]()
-    var totalAmountToPay : Float = 0.0
-    var customers = [String : Customer]()
+    var totalAmountToPay : Float = 0.0    
     
     init(customerId : String, firstName : String, lastName : String, email : String) {
         self.customerId = customerId
@@ -40,16 +39,6 @@ class Customer : IDisplay, CalculateTotalBill{
             totalAmountToPay = totalAmountToPay + i.value.totalBillAmount
         }
         return totalAmountToPay
-    }
-
-    func addCustomer(customer : Customer, customerId : String) {
-        customers.updateValue(customer, forKey: customerId)
-    }
-    
-    subscript(code : String) -> Any{
-        get{
-            return self.customers
-        }
     }
     
     func display() {
