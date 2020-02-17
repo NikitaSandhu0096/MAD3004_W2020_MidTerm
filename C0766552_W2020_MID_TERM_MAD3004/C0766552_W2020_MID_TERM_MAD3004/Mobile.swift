@@ -12,13 +12,13 @@ class Mobile : Bill, CalculateTotalBill{
     
     var mobileManufacturerName : String
     var planName : String
-    var mobileNumber : Int
+    var mobileNumber : String
     var internetGBUsed : Int
     var minuteUsed : Int
     var planRate : Float
     var internetRate : Float
 
-    init(billId: String, billDate: String, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : Int, internetGBUsed : Int, minuteUsed : Int, planRate : Float, internetRate : Float) {
+    init(billId: String, billDate: String, billType: type, mobileManufacturerName : String, planName : String, mobileNumber : String, internetGBUsed : Int, minuteUsed : Int, planRate : Float, internetRate : Float) {
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
         self.mobileNumber = mobileNumber

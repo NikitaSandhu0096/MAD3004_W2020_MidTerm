@@ -18,7 +18,7 @@ var h1 = Hydro(billId: "HYDB0001", billDate: "16/11/2018", billType: .Hydro, age
 
 var h2 = Hydro(billId: "HYDB0002", billDate: "15/09/2018", billType: .Hydro, agencyName: "Bruce Power", unitConsumed: 500, hydroRate: 2.5)
 
-var m1 = Mobile(billId: "MOBB0001", billDate: "06/06/2019", billType: .Mobile, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo Plan", mobileNumber: 9753124680, internetGBUsed: 4, minuteUsed: 230, planRate: 0.8, internetRate: 0.9)
+var m1 = Mobile(billId: "MOBB0001", billDate: "06/06/2019", billType: .Mobile, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo Plan", mobileNumber: "9753124680", internetGBUsed: 4, minuteUsed: 230, planRate: 0.8, internetRate: 0.9)
 
 /*i1.display()
 i2.display()
@@ -37,7 +37,12 @@ var c4 = Customer(customerId: "C0004", firstName: "Ajeesha", lastName: "Jacob", 
 
 c1.addBill(bill: i1, billId: i1.billId)
 c1.addBill(bill: h1, billId: h1.billId)
-c1.addBill(bill: m1, billId: m1.billId)
+
+if m1.mobileNumber.mobileValid(){
+    c1.addBill(bill: m1, billId: m1.billId)
+}else{
+    print("Enter a valid mobile number in the Mobile Bill details")
+}
 
 c2.addBill(bill: i2, billId: i2.billId)
 c2.addBill(bill: h2, billId: h2.billId)
@@ -80,26 +85,26 @@ getCustomerById(Id: "C0004")*/
 if c1.email.emailValid(){
     getCustomerById(Id: "C0001")
 }else{
-    print("Enter a vaild email")
+    print("Enter a vaild email in the Customer details")
 }
 
 if c2.email.emailValid(){
     getCustomerById(Id: "C0002")
 }else{
-    print("Enter a vaild email")
+    print("Enter a vaild email in the Customer details")
 }
 
 if c3.email.emailValid(){
     getCustomerById(Id: "C0003")
 }else{
-    print("Enter a vaild email")
+    print("Enter a vaild email in the Customer details")
 }
 
 if c4.email.emailValid(){
     getCustomerById(Id: "C0004")
 }else{
-    print("Enter a vaild email")
+    print("Enter a vaild email in the Customer details")
 }
 
-getCustomerById(Id: "C0005")
+//getCustomerById(Id: "C0005")
 
