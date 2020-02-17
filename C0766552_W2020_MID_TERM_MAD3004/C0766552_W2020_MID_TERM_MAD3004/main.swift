@@ -72,8 +72,34 @@ func getCustomerById(Id : String) {
     }
 }
 
-getCustomerById(Id: "C0001")
+/*getCustomerById(Id: "C0001")
 getCustomerById(Id: "C0002")
 getCustomerById(Id: "C0003")
-getCustomerById(Id: "C0004")
+getCustomerById(Id: "C0004")*/
+
+if c1.email.emailValid(){
+    getCustomerById(Id: "C0001")
+}else{
+    print("Enter a vaild email")
+}
+
+if c2.email.emailValid(){
+    getCustomerById(Id: "C0002")
+}else{
+    print("Enter a vaild email")
+}
+
+if c3.email.emailValid(){
+    getCustomerById(Id: "C0003")
+}else{
+    print("Enter a vaild email")
+}
+
+if c4.email.emailValid(){
+    getCustomerById(Id: "C0004")
+}else{
+    print("Enter a vaild email")
+}
+
 getCustomerById(Id: "C0005")
+
