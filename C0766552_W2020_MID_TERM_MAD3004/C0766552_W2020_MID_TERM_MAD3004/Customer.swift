@@ -56,5 +56,6 @@ class Customer : IDisplay, CalculateTotalBill{
         }else{
         print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }
+        print("")
     }
 }

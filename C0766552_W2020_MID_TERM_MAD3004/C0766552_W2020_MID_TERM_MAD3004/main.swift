@@ -73,4 +73,7 @@ func getCustomerById(Id : String) {
 }
 
 getCustomerById(Id: "C0001")
+getCustomerById(Id: "C0002")
+getCustomerById(Id: "C0003")
+getCustomerById(Id: "C0004")
 getCustomerById(Id: "C0005")
