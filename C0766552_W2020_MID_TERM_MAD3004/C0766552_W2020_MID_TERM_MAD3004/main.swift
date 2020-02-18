@@ -10,9 +10,9 @@ import Foundation
 
 var i1 = Internet(billId: "INTB0001", billDate: "19/10/2019", billType: .Internet, providerName: "Rogers", internetGBUsed: 500, internetRate: 0.5)
 
-var i2 = Internet(billId: "INTB0002", billDate: "20/11/2019", billType: .Internet, providerName: "Rogers", internetGBUsed: 400, internetRate: 0.9)
+var i2 = Internet(billId: "INTB0002", billDate: "20/11/2019", billType: .Internet, providerName: "Bell", internetGBUsed: 400, internetRate: 0.9)
 
-var i3 = Internet(billId: "INTB0003", billDate: "21/12/2018", billType: .Internet, providerName: "Rogers", internetGBUsed: 350, internetRate: 0.7)
+var i3 = Internet(billId: "INTB0003", billDate: "21/12/2018", billType: .Internet, providerName: "Fido", internetGBUsed: 350, internetRate: 0.7)
 
 var h1 = Hydro(billId: "HYDB0001", billDate: "16/11/2018", billType: .Hydro, agencyName: "Planet Energy", unitConsumed: 600, hydroRate: 1.5)
 
@@ -108,3 +108,6 @@ if c4.email.emailValid(){
 
 //getCustomerById(Id: "C0005")
 
+var ins1 = Insurance(insuranceProviderName: "Sun Life Health Insurance", insuranceType: "Health", startDate: "01/02/2018", endDate: "31/03/2019", insuranceRate: 30)
+
+ins1.display()

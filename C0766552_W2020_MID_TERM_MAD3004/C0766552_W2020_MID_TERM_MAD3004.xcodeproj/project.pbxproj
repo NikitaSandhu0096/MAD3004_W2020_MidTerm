@@ -16,6 +16,7 @@
 		9B5F064D23F60BF100E3AA0B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F064C23F60BF100E3AA0B /* Customer.swift */; };
 		EE5C0C3823F76F0B0014A176 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0C3723F76F0B0014A176 /* Extension.swift */; };
 		EE5C0C4D23F90AB30014A176 /* CalculateTotalBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0C4C23F90AB30014A176 /* CalculateTotalBill.swift */; };
+		EEAFCAAB23FB63EA00EEF4CC /* Insurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFCAAA23FB63EA00EEF4CC /* Insurance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		9B5F064C23F60BF100E3AA0B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		EE5C0C3723F76F0B0014A176 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EE5C0C4C23F90AB30014A176 /* CalculateTotalBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTotalBill.swift; sourceTree = "<group>"; };
+		EEAFCAAA23FB63EA00EEF4CC /* Insurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insurance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				9B5F064C23F60BF100E3AA0B /* Customer.swift */,
 				EE5C0C3723F76F0B0014A176 /* Extension.swift */,
 				EE5C0C4C23F90AB30014A176 /* CalculateTotalBill.swift */,
+				EEAFCAAA23FB63EA00EEF4CC /* Insurance.swift */,
 			);
 			path = C0766552_W2020_MID_TERM_MAD3004;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				9B23686D23F60102006DD431 /* Internet.swift in Sources */,
 				9B5F064B23F60B0100E3AA0B /* Hydro.swift in Sources */,
 				9B23686223F5FCB2006DD431 /* main.swift in Sources */,
+				EEAFCAAB23FB63EA00EEF4CC /* Insurance.swift in Sources */,
 				EE5C0C3823F76F0B0014A176 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
