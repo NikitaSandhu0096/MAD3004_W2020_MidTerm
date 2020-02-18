@@ -37,6 +37,10 @@ class Customer : IDisplay, CalculateTotalBill{
         bills.updateValue(bill, forKey: billId)
     }
     
+    func removeBill(bill : Bill, billId : String) {
+        bills.removeValue(forKey: billId)
+    }
+    
     func calculateBill() -> Float {
         
         for i in bills{
