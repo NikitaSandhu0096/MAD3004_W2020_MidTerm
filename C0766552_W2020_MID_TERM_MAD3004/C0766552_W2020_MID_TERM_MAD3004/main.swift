@@ -54,7 +54,6 @@ c2.addBill(bill: h2, billId: h2.billId)
 c3.addBill(bill: i3, billId: i3.billId)
 c3.addInsurance(insurance : ins1, insuranceType : ins1.insuranceType)
 
-
 //c3.removeBill(bill: i3, billId : i3.billId)
 
 /*c1.display()
