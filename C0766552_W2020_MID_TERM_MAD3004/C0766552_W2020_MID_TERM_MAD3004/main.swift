@@ -20,7 +20,11 @@ var h2 = Hydro(billId: "HYDB0002", billDate: "15/09/2018", billType: .Hydro, age
 
 var m1 = Mobile(billId: "MOBB0001", billDate: "06/06/2019", billType: .Mobile, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo Plan", mobileNumber: "9753124680", internetGBUsed: 4, minuteUsed: 230, planRate: 0.8, internetRate: 0.9)
 
-/*i1.display()
+var ins1 = Insurance(insuranceProviderName: "Sun Life Health Insurance", insuranceType: "Health", startDate: "01/02/2018", endDate: "31/03/2019", insuranceRate: 30)
+
+/*ins1.display()
+
+i1.display()
 i2.display()
 i3.display()
 h1.display()
@@ -48,13 +52,14 @@ c2.addBill(bill: i2, billId: i2.billId)
 c2.addBill(bill: h2, billId: h2.billId)
 
 c3.addBill(bill: i3, billId: i3.billId)
+c3.addInsurance(insurance : ins1, insuranceType : ins1.insuranceType)
 
-/*c1.display()
+c1.display()
 c2.display()
 c3.display()
-c4.display()*/
+c4.display()
 
-var customers = [String : Customer]()
+/*var customers = [String : Customer]()
 
 func addCustomer(customer : Customer, customerId : String) {
     customers.updateValue(customer, forKey: customerId)
@@ -108,6 +113,5 @@ if c4.email.emailValid(){
 
 //getCustomerById(Id: "C0005")
 
-var ins1 = Insurance(insuranceProviderName: "Sun Life Health Insurance", insuranceType: "Health", startDate: "01/02/2018", endDate: "31/03/2019", insuranceRate: 30)
 
-ins1.display()
+*/

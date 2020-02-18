@@ -43,7 +43,7 @@ class Insurance : IDisplay{
      return endDate1!
     }
     
-    func totalDays() -> Int{
+    func totalDays() -> Int{            //https://stackoverflow.com/questions/24723431/swift-days-between-two-nsdates
         let current = Calendar.current
         let numberOfDays = current.dateComponents([Calendar.Component.day], from: startingDate(string: startDate), to: endingDate(string: endDate))
         return numberOfDays.day!

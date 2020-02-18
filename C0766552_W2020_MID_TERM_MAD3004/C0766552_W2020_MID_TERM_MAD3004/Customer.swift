@@ -16,7 +16,10 @@ class Customer : IDisplay, CalculateTotalBill{
     var fullName : String = ""
     var email : String
     private lazy var bills = [String : Bill]()
-    var totalAmountToPay : Float = 0.0    
+    private lazy var insurances = [String : Insurance]()
+    var totalAmountToPay : Float = 0.0
+    var totalAmountToPay1 : Float = 0.0
+    var totalAmountToPay2 : Float = 0.0
     
     init(customerId : String, firstName : String, lastName : String, email : String) {
         self.customerId = customerId
@@ -35,10 +38,21 @@ class Customer : IDisplay, CalculateTotalBill{
     }
     
     func calculateBill() -> Float {
+        
         for i in bills{
-            totalAmountToPay = totalAmountToPay + i.value.totalBillAmount
+            totalAmountToPay1 = totalAmountToPay1 + i.value.totalBillAmount
         }
+        
+        for j in insurances{
+            totalAmountToPay2 = totalAmountToPay2 + j.value.insurancePayment()
+        }
+        
+        totalAmountToPay = totalAmountToPay1 + totalAmountToPay2
         return totalAmountToPay
+    }
+    
+    func addInsurance(insurance : Insurance, insuranceType : String){
+        insurances.updateValue(insurance, forKey: insuranceType)
     }
     
     func display() {
@@ -49,6 +63,12 @@ class Customer : IDisplay, CalculateTotalBill{
         print("      ************************************")
         for i in bills{
             i.value.display()
+            print("      ************************************")
+        }
+        for j in insurances{
+            print("      ------Insurance Information------")
+            print("      ************************************")
+            j.value.display()
             print("      ************************************")
         }
         if bills.count == 0{
