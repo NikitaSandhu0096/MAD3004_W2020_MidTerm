@@ -54,12 +54,12 @@ c2.addBill(bill: h2, billId: h2.billId)
 c3.addBill(bill: i3, billId: i3.billId)
 c3.addInsurance(insurance : ins1, insuranceType : ins1.insuranceType)
 
-c1.display()
+/*c1.display()
 c2.display()
 c3.display()
-c4.display()
+c4.display()*/
 
-/*var customers = [String : Customer]()
+var customers = [String : Customer]()
 
 func addCustomer(customer : Customer, customerId : String) {
     customers.updateValue(customer, forKey: customerId)
@@ -112,6 +112,3 @@ if c4.email.emailValid(){
 }
 
 //getCustomerById(Id: "C0005")
-
-
-*/
