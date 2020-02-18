@@ -33,7 +33,7 @@ class Bill : IDisplay{
         dateformatGet.dateFormat = "dd/MM/yyyy"
 
         let dateformatSet = DateFormatter()
-        dateformatSet.dateFormat = "EEEE,d MMMM, yyyy"
+        dateformatSet.dateFormat = "EEEE, d MMMM, yyyy"
 
         let date : Date? = dateformatGet.date(from: billDate)
         return dateformatSet.string(from: date!)
