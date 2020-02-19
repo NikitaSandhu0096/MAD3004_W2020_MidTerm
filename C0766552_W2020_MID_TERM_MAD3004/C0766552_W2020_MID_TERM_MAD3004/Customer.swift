@@ -67,28 +67,27 @@ class Customer : IDisplay, CalculateTotalBill{
         print("Customer ID : \(self.customerId)")
         print("Customer Full Name : \(name())")
         print("Customer Email ID : \(self.email)")
+        print("      ----------Bill Information----------")
+        print("      ************************************")
         
-        if bills.count == 0{
+        for i in bills{
+            i.value.display()
             print("      ************************************")
-            print("      No Bill Information Found for the given customer")
+        }
+        for j in insurances{
+            print("      -------Insurance Information-------")
+            print("      ************************************")
+            j.value.display()
+            print("      ************************************")
+        }
+        if bills.count == 0{
+            print("      --No Bill Information Found for the given customer--")
             if insurances.count == 0{
                 print("      ************************************")
-                print("      No Insurance Information Found for the given customer")
+                print("      --No Insurance Information Found for the given customer--")
             }
             print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }else{
-            print("      ----------Bill Information----------")
-            print("      ************************************")
-            for i in bills{
-                i.value.display()
-                print("      ************************************")
-            }
-            for j in insurances{
-                print("      -------Insurance Information-------")
-                print("      ************************************")
-                j.value.display()
-                print("      ************************************")
-            }
             print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }
         print("")
