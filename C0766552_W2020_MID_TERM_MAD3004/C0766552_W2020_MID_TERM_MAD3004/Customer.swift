@@ -59,26 +59,37 @@ class Customer : IDisplay, CalculateTotalBill{
         insurances.updateValue(insurance, forKey: insuranceType)
     }
     
+    func removeInsurance(insurance : Insurance, insuranceType : String) {
+        insurances.removeValue(forKey: insuranceType)
+    }
+    
     func display() {
         print("Customer ID : \(self.customerId)")
         print("Customer Full Name : \(name())")
         print("Customer Email ID : \(self.email)")
-        print("      ----------Bill Information----------")
-        print("      ************************************")
-        for i in bills{
-            i.value.display()
-            print("      ************************************")
-        }
-        for j in insurances{
-            print("      ------Insurance Information------")
-            print("      ************************************")
-            j.value.display()
-            print("      ************************************")
-        }
+        
         if bills.count == 0{
-            print("      No Bill Found for the given customer")
+            print("      ************************************")
+            print("      No Bill Information Found for the given customer")
+            if insurances.count == 0{
+                print("      ************************************")
+                print("      No Insurance Information Found for the given customer")
+            }
+            print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }else{
-        print("      Total Bill Amount to Pay : \(calculateBill().currency())")
+            print("      ----------Bill Information----------")
+            print("      ************************************")
+            for i in bills{
+                i.value.display()
+                print("      ************************************")
+            }
+            for j in insurances{
+                print("      -------Insurance Information-------")
+                print("      ************************************")
+                j.value.display()
+                print("      ************************************")
+            }
+            print("      Total Bill Amount to Pay : \(calculateBill().currency())")
         }
         print("")
     }
