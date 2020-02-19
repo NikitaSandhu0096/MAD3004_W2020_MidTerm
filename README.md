@@ -2,6 +2,9 @@
 
 C0766552_W2020_MID_TERM_MAD3004
 
+Nikita Sandhu
+C0766552
+
 References
 
 //https://stackoverflow.com/questions/35700281/date-format-in-swift
